@@ -3,6 +3,7 @@ import { ChakraProvider } from '@chakra-ui/react';
 import Header from './components/Header';
 import * as React from 'react';
 import { useEffect } from 'react';
+import Login from './pages/Login';
 
 function App() {
   useEffect(() => {
@@ -11,6 +12,7 @@ function App() {
   return (
     <ChakraProvider>
       <Header />
+      <Login/>
     </ChakraProvider>
   );
 }

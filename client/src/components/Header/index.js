@@ -8,14 +8,14 @@ function Header() {
             <Tabs variant='soft-rounded' colorScheme='green'>
                 <TabList>
                     <Tab>Games</Tab>
-                    <Tab>Players</Tab>
+                    <Tab>Login</Tab>
                 </TabList>
                 <TabPanels>
                     <TabPanel>
                         <p>games!</p>
                     </TabPanel>
                     <TabPanel>
-                        <p>players!</p>
+                        <p>players</p>
                     </TabPanel>
                 </TabPanels>
             </Tabs>
