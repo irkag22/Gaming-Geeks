@@ -5,13 +5,14 @@ const { signToken } = require('../utils/auth');
 const resolvers = {
     Query: {
         users: async () => {
-          return User.find();
+          return User.find().populate('posts');
         },
         user: async (parent, { username }) => {
-          return User.findOne({ username });
+          return User.findOne({ username }).populate('posts');
         },
-        posts: async () => {
-          return Post.find();
+        posts: async (parent, { username }) => {
+          const params = username ? { username } : {};
+          return Post.find(params).sort({ createdAt: -1 });
         },
       },
     
@@ -43,7 +44,7 @@ const resolvers = {
           const post = await Post.create({ postText, postGamer });
 
           await User.findOneAndUpdate(
-            { username: postGamer },
+            { _id: postGamer },
             { $addToSet: { posts: post._id } }
           );
     
