@@ -6,7 +6,13 @@ const resolvers = {
     Query: {
         users: async () => {
           return User.find();
-        }
+        },
+        user: async (parent, { username }) => {
+          return User.findOne({ username });
+        },
+        posts: async () => {
+          return Post.find();
+        },
       },
     
     Mutation: {
@@ -31,7 +37,18 @@ const resolvers = {
             const token = signToken(user);
       
             return { token, user };
-          }
+          },
+
+        addPost: async (parent, { postText, postGamer }) => {
+          const post = await Post.create({ postText, postGamer });
+
+          await User.findOneAndUpdate(
+            { username: postGamer },
+            { $addToSet: { posts: post._id } }
+          );
+    
+          return post;
+        },
         },
 };
 module.exports = resolvers;
