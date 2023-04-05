@@ -1,4 +1,5 @@
 const { Schema, model } = require('mongoose');
+const bcrypt = require('bcrypt');
 
 const userSchema = new Schema(
 {
@@ -12,8 +13,19 @@ const userSchema = new Schema(
     type: String,
     required: true,
     unique: true,
-    match: [/.+@.+\..+/, 'Please enter a valid email address'] //Regex to match email with a message for validation
+    match: [/.+@.+\..+/, 'Please enter a valid email address']
   },
+  password: {
+    type: String,
+    required: true,
+    minlength: 5,
+  },
+  games: [
+    {
+      type: Schema.Types.ObjectId,
+      ref: 'game'
+    }
+  ],
   posts: [
     {
       type: Schema.Types.ObjectId,
@@ -30,16 +42,26 @@ const userSchema = new Schema(
 {
   toJSON: {
     virtuals: true
-  },
-  id: false
+  }
 });
 
-// Create a virtual property `friendCount` that gets the amount of friends associated with a user
-userSchema.virtual('followersCount').get(function() {
-  return this.friends.length;
+userSchema.virtual('followerCount').get(function() {
+  return this.followers.length;
 });
 
-// Initialize User model
+userSchema.pre('save', async function (next) {
+  if (this.isNew || this.isModified('password')) {
+    const saltRounds = 10;
+    this.password = await bcrypt.hash(this.password, saltRounds);
+  }
+
+  next();
+});
+
+userSchema.methods.isCorrectPassword = async function (password) {
+  return bcrypt.compare(password, this.password);
+};
+
 const User = model('user', userSchema);
 
 module.exports = User;
