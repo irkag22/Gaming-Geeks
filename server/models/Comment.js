@@ -6,15 +6,15 @@ const commentSchema = new Schema(
       type: Schema.Types.ObjectId,
       default: () => new Types.ObjectId()
     },
-    commentBody: {
+    commentText: {
       type: String,
       required: true,
-      minlength: 10,
+      minlength: 5,
       maxlength: 400
     },
-    username: {
-      type: String,
-      required: true
+    commentGamer: {
+      type: Schema.Types.ObjectId,
+      ref: 'user'
     },
     createdAt: {
       type: Date,

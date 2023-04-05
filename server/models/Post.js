@@ -7,16 +7,20 @@ const postSchema = new Schema(
     type: String,
     required: true,
     minlength: 10,
-    maxlength: 300
+    maxlength: 800
   },
   createdAt: {
     type: Date,
     default: Date.now,
     get: (date) => date.toLocaleString()
   },
-  username: {
-    type: String,
-    required: true
+  postGamer: {
+    type: Schema.Types.ObjectId,
+    ref: 'user'
+  },
+  game: {
+    type: Schema.Types.ObjectId,
+    ref: 'game'
   },
   comments: [commentSchema]
 },
@@ -24,14 +28,12 @@ const postSchema = new Schema(
   toJSON: {
     virtuals: true,
     getters: true
-  },
-  id: false
+  }
 });
 
-thoughtSchema.virtual('commentCount').get(function() {
+postSchema.virtual('commentCount').get(function() {
   return this.comments.length;
 });
-
 
 const Post = model('post', postSchema);
 
