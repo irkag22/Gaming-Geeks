@@ -23,10 +23,9 @@ function Header() {
     return (
         <header>
             <Flex direction="column" align="center">
-            {/* <Center h="50vh"> */}
+
                 <img className="img" src={Logo} alt="project" width="200" height="200"></img>
-            {/* </Center> */}
-            {/* <Center h="10vh"> */}
+
                 <Tabs variant='soft-rounded' colorScheme='green'>
                     <TabList>
                         <Tab>Home</Tab>
@@ -68,7 +67,7 @@ function Header() {
                         </TabPanel>
                     </TabPanels>
                 </Tabs>
-            {/* </Center> */}
+
             </Flex>
         </header>
     );
