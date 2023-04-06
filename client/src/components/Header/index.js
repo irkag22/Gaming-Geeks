@@ -7,6 +7,7 @@ import Logo from '../../assets/gg-logo.png'
 import Home from '../../pages/Home';
 import Gamers from '../../pages/Gamers';
 import Games from '../../pages/Games';
+import FormikGame from '../../pages/Form';
 import Profile from '../../pages/Profile';
 import Login from '../../pages/Login';
 import Logout from '../../pages/Logout';
@@ -29,7 +30,9 @@ function Header() {
                         <Tab>Home</Tab>
                         <Tab>Profile</Tab>
                         <Tab>Games</Tab>
+                        <Tab>Chat</Tab>
                         <Tab>Gamers</Tab>
+
 
                         {isLoggedIn ? (
                             <Tab>Logout</Tab>
@@ -38,7 +41,7 @@ function Header() {
                         )}
                         <Tab>Signup</Tab>
 
-
+                        <Tab>Install</Tab>
                     </TabList>
                     <TabPanels>
                         <TabPanel>
@@ -49,6 +52,10 @@ function Header() {
                         </TabPanel>
                         <TabPanel>
                             <Games />
+                            <FormikGame />
+                        </TabPanel>
+                        <TabPanel>
+                            <FormikGame />
                         </TabPanel>
                         <TabPanel>
                             <Gamers />
@@ -62,6 +69,9 @@ function Header() {
                         </TabPanel>
                         <TabPanel>
                             <Signup />
+                        </TabPanel>
+                        <TabPanel>
+                            {/* <Install /> */}
                         </TabPanel>
                     </TabPanels>
                 </Tabs>
