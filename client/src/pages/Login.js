@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+//import { Link } from 'react-router-dom';
 import { useMutation } from '@apollo/client';
 import { LOGIN_USER } from '../utils/mutations';
 
@@ -10,35 +10,35 @@ const Login = (props) => {
   const [login, { error, data }] = useMutation(LOGIN_USER);
 
   // update state based on form input changes
-  const handleChange = (event) => {
-    const { name, value } = event.target;
+   const handleChange = (event) => {
+     const { name, value } = event.target;
 
-    setFormState({
-      ...formState,
-      [name]: value,
-    });
-  };
+     setFormState({
+       ...formState,
+       [name]: value,
+     });
+   };
 
-  // submit form
-  const handleFormSubmit = async (event) => {
-    event.preventDefault();
-    console.log(formState);
-    try {
-      const { data } = await login({
-        variables: { ...formState },
-      });
+   // submit form
+   const handleFormSubmit = async (event) => {
+     event.preventDefault();
+     console.log(formState);
+     try {
+       const { data } = await login({
+         variables: { ...formState },
+       });
 
-      Auth.login(data.login.token);
-    } catch (e) {
-      console.error(e);
-    }
+       Auth.login(data.login.token);
+     } catch (e) {
+       console.error(e);
+     }
 
-    // clear form values
-    setFormState({
-      email: '',
-      password: '',
-    });
-  };
+     // clear form values
+     setFormState({
+       email: '',
+       password: '',
+     });
+   };
 
   return (
     <main className="flex-row justify-center mb-4">
@@ -49,7 +49,6 @@ const Login = (props) => {
             {data ? (
               <p>
                 Success! You may now head{' '}
-                <Link to="/">back to the homepage.</Link>
               </p>
             ) : (
               <form onSubmit={handleFormSubmit}>
