@@ -2,15 +2,15 @@ import React from 'react';
 import {
     Card,
     CardBody,
-    CardFooter,
+    Container,
+    Grid,
+    GridItem,
     Image,
     Stack,
     Heading,
     Text,
     Divider,
-    ButtonGroup,
-    Button,
-    Flex
+    Flex,
 } from '@chakra-ui/react';
 
 
@@ -103,9 +103,9 @@ const game14 = {
 
 export default function Game() {
     return (
-        <div>
-            <Flex flexWrap="wrap">
-                <Card maxW='sm'>
+        <Grid templateColumns='repeat(2, 1fr)' gap={6}>
+            <GridItem>
+                <Card maxW='sm' style={{ height: '100%', backgroundColor: '#F0FFF4' }}>
                     <CardBody>
 
                         <Image
@@ -124,7 +124,9 @@ export default function Game() {
                     </CardBody>
                     <Divider />
                 </Card>
-                <Card maxW='sm'>
+            </GridItem>
+            <GridItem>
+                <Card maxW='sm' style={{ height: '100%', backgroundColor: '#F0FFF4' }}>
                     <CardBody>
 
                         <Image
@@ -143,7 +145,9 @@ export default function Game() {
                     </CardBody>
                     <Divider />
                 </Card>
-                <Card maxW='sm'>
+            </GridItem>
+            <GridItem>
+                <Card maxW='sm' style={{ height: '100%', backgroundColor: '#F0FFF4' }}>
                     <CardBody>
 
                         <Image
@@ -162,7 +166,9 @@ export default function Game() {
                     </CardBody>
                     <Divider />
                 </Card>
-                <Card maxW='sm'>
+            </GridItem>
+            <GridItem>
+                <Card maxW='sm' style={{ height: '100%', backgroundColor: '#F0FFF4' }}>
                     <CardBody>
 
                         <Image
@@ -181,7 +187,9 @@ export default function Game() {
                     </CardBody>
                     <Divider />
                 </Card>
-                <Card maxW='sm'>
+            </GridItem>
+            <GridItem>
+                <Card maxW='sm' style={{ height: '100%', backgroundColor: '#F0FFF4' }}>
                     <CardBody>
 
                         <Image
@@ -199,7 +207,10 @@ export default function Game() {
                         </Stack>
                     </CardBody>
                     <Divider />
-                </Card> <Card maxW='sm'>
+                </Card>
+            </GridItem>
+            <GridItem>
+                <Card maxW='sm' style={{ height: '100%', backgroundColor: '#F0FFF4' }}>
                     <CardBody>
 
                         <Image
@@ -218,7 +229,9 @@ export default function Game() {
                     </CardBody>
                     <Divider />
                 </Card>
-                <Card maxW='sm'>
+            </GridItem>
+            <GridItem>
+                <Card maxW='sm' style={{ height: '100%', backgroundColor: '#F0FFF4' }}>
                     <CardBody>
 
                         <Image
@@ -237,7 +250,9 @@ export default function Game() {
                     </CardBody>
                     <Divider />
                 </Card>
-                <Card maxW='sm'>
+            </GridItem>
+            <GridItem>
+                <Card maxW='sm' style={{ height: '100%', backgroundColor: '#F0FFF4' }}>
                     <CardBody>
 
                         <Image
@@ -256,7 +271,9 @@ export default function Game() {
                     </CardBody>
                     <Divider />
                 </Card>
-                <Card maxW='sm'>
+            </GridItem>
+            <GridItem>
+                <Card maxW='sm' style={{ height: '100%', backgroundColor: '#F0FFF4' }}>
                     <CardBody>
 
                         <Image
@@ -275,7 +292,9 @@ export default function Game() {
                     </CardBody>
                     <Divider />
                 </Card>
-                <Card maxW='sm'>
+            </GridItem>
+            <GridItem>
+                <Card maxW='sm' style={{ height: '100%', backgroundColor: '#F0FFF4' }}>
                     <CardBody>
 
                         <Image
@@ -294,8 +313,9 @@ export default function Game() {
                     </CardBody>
                     <Divider />
                 </Card>
-
-                <Card maxW='sm'>
+            </GridItem>
+            <GridItem>
+                <Card maxW='sm' style={{ height: '100%', backgroundColor: '#F0FFF4' }}>
                     <CardBody>
 
                         <Image
@@ -314,7 +334,9 @@ export default function Game() {
                     </CardBody>
                     <Divider />
                 </Card>
-                <Card maxW='sm'>
+            </GridItem>
+            <GridItem>
+                <Card maxW='sm' style={{ height: '100%', backgroundColor: '#F0FFF4' }}>
                     <CardBody>
 
                         <Image
@@ -333,8 +355,10 @@ export default function Game() {
                     </CardBody>
                     <Divider />
                 </Card>
+            </GridItem>
+            <GridItem>
 
-                <Card maxW='sm'>
+                <Card maxW='sm' style={{ height: '100%', backgroundColor: '#F0FFF4' }}>
                     <CardBody>
 
                         <Image
@@ -353,7 +377,9 @@ export default function Game() {
                     </CardBody>
                     <Divider />
                 </Card>
-                <Card maxW='sm'>
+            </GridItem>
+            <GridItem>
+                <Card maxW='sm' style={{ height: '100%', backgroundColor: '#F0FFF4' }}>
                     <CardBody>
 
                         <Image
@@ -372,7 +398,7 @@ export default function Game() {
                     </CardBody>
                     <Divider />
                 </Card>
-            </Flex>
-        </div>
+            </GridItem>
+        </Grid>
     );
 }
