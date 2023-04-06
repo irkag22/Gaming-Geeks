@@ -14,60 +14,62 @@ import Signup from '../../pages/Signup';
 
 import Auth from '../../utils/auth';
 
-import { Center } from '@chakra-ui/react'
+import { Center, Flex } from '@chakra-ui/react'
 
 function Header() {
-    
+
     const isLoggedIn = Auth.loggedIn();
 
     return (
         <header>
-            <Center h="50vh">
-            <img className="img" src={Logo} alt="project" width="200" height="200"></img>
-            </Center>
-            <Center h="10vh">
-            <Tabs variant='soft-rounded' colorScheme='green'>
-                <TabList>
-                    <Tab>Home</Tab>
-                    <Tab>Profile</Tab>
-                    <Tab>Games</Tab>
-                    <Tab>Gamers</Tab>   
-                    
-                    {isLoggedIn ? (
-                    <Tab>Logout</Tab>
-                    ) : (
-                    <Tab>Login</Tab>
-                    )}
-                    <Tab>Signup</Tab>  
-                    
+            <Flex direction="column" align="center">
+            {/* <Center h="50vh"> */}
+                <img className="img" src={Logo} alt="project" width="200" height="200"></img>
+            {/* </Center> */}
+            {/* <Center h="10vh"> */}
+                <Tabs variant='soft-rounded' colorScheme='green'>
+                    <TabList>
+                        <Tab>Home</Tab>
+                        <Tab>Profile</Tab>
+                        <Tab>Games</Tab>
+                        <Tab>Gamers</Tab>
 
-                </TabList>
-                <TabPanels>
-                    <TabPanel>
-                        <Home />
-                    </TabPanel>
-                    <TabPanel>
-                        <Profile />
-                    </TabPanel>
-                    <TabPanel>
-                        <Games />
-                    </TabPanel>
-                    <TabPanel>
-                        <Gamers />
-                    </TabPanel>
-                    <TabPanel>
-                    {isLoggedIn ? (
-                        <Logout />
-                    ) : (
-                        <Login />
-                    )}
-                    </TabPanel>
-                    <TabPanel>
-                        <Signup />
-                    </TabPanel>
-                </TabPanels>
-            </Tabs>
-            </Center>
+                        {isLoggedIn ? (
+                            <Tab>Logout</Tab>
+                        ) : (
+                            <Tab>Login</Tab>
+                        )}
+                        <Tab>Signup</Tab>
+
+
+                    </TabList>
+                    <TabPanels>
+                        <TabPanel>
+                            <Home />
+                        </TabPanel>
+                        <TabPanel>
+                            <Profile />
+                        </TabPanel>
+                        <TabPanel>
+                            <Games />
+                        </TabPanel>
+                        <TabPanel>
+                            <Gamers />
+                        </TabPanel>
+                        <TabPanel>
+                            {isLoggedIn ? (
+                                <Logout />
+                            ) : (
+                                <Login />
+                            )}
+                        </TabPanel>
+                        <TabPanel>
+                            <Signup />
+                        </TabPanel>
+                    </TabPanels>
+                </Tabs>
+            {/* </Center> */}
+            </Flex>
         </header>
     );
 }
