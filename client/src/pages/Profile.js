@@ -1,6 +1,9 @@
 function Profile() {
     return (
-        <h1>PROFILE</h1>
+        <div>
+            <h1>PROFILE</h1>
+            <p>Welcome to your profile page! Please use the tabs above to navigate.</p>
+        </div>
     );
 }
     
