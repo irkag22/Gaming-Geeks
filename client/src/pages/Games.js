@@ -10,6 +10,7 @@ import {
     Divider,
     ButtonGroup,
     Button,
+    Flex
 } from '@chakra-ui/react';
 
 
@@ -103,273 +104,275 @@ const game14 = {
 export default function Game() {
     return (
         <div>
-            <Card maxW='sm'>
-                <CardBody>
+            <Flex flexWrap="wrap">
+                <Card maxW='sm'>
+                    <CardBody>
 
-                    <Image
-                        src={game1.image}
-                        alt='Among Us game image'
-                        borderRadius='lg'
-                        style={{ width: '100%' }}
-                    />
+                        <Image
+                            src={game1.image}
+                            alt='Among Us game image'
+                            borderRadius='lg'
+                            style={{ width: '100%' }}
+                        />
 
-                    <Stack mt='6' spacing='3'>
-                        <Heading size='md'>{game1.name}</Heading>
-                        <Text>
-                            {game1.description}
-                        </Text>
-                    </Stack>
-                </CardBody>
-                <Divider />
-            </Card>
-            <Card maxW='sm'>
-                <CardBody>
+                        <Stack mt='6' spacing='3'>
+                            <Heading size='md'>{game1.name}</Heading>
+                            <Text>
+                                {game1.description}
+                            </Text>
+                        </Stack>
+                    </CardBody>
+                    <Divider />
+                </Card>
+                <Card maxW='sm'>
+                    <CardBody>
 
-                    <Image
-                        src={game2.image}
-                        alt='Among Us game image'
-                        borderRadius='lg'
-                        style={{ width: '100%' }}
-                    />
+                        <Image
+                            src={game2.image}
+                            alt='Among Us game image'
+                            borderRadius='lg'
+                            style={{ width: '100%' }}
+                        />
 
-                    <Stack mt='6' spacing='3'>
-                        <Heading size='md'>{game2.name}</Heading>
-                        <Text>
-                            {game2.description}
-                        </Text>
-                    </Stack>
-                </CardBody>
-                <Divider />
-            </Card>
-            <Card maxW='sm'>
-                <CardBody>
+                        <Stack mt='6' spacing='3'>
+                            <Heading size='md'>{game2.name}</Heading>
+                            <Text>
+                                {game2.description}
+                            </Text>
+                        </Stack>
+                    </CardBody>
+                    <Divider />
+                </Card>
+                <Card maxW='sm'>
+                    <CardBody>
 
-                    <Image
-                        src={game3.image}
-                        alt='Among Us game image'
-                        borderRadius='lg'
-                        style={{ width: '100%' }}
-                    />
+                        <Image
+                            src={game3.image}
+                            alt='Among Us game image'
+                            borderRadius='lg'
+                            style={{ width: '100%' }}
+                        />
 
-                    <Stack mt='6' spacing='3'>
-                        <Heading size='md'>{game3.name}</Heading>
-                        <Text>
-                            {game3.description}
-                        </Text>
-                    </Stack>
-                </CardBody>
-                <Divider />
-            </Card>
-            <Card maxW='sm'>
-                <CardBody>
+                        <Stack mt='6' spacing='3'>
+                            <Heading size='md'>{game3.name}</Heading>
+                            <Text>
+                                {game3.description}
+                            </Text>
+                        </Stack>
+                    </CardBody>
+                    <Divider />
+                </Card>
+                <Card maxW='sm'>
+                    <CardBody>
 
-                    <Image
-                        src={game4.image}
-                        alt='Among Us game image'
-                        borderRadius='lg'
-                        style={{ width: '100%' }}
-                    />
+                        <Image
+                            src={game4.image}
+                            alt='Among Us game image'
+                            borderRadius='lg'
+                            style={{ width: '100%' }}
+                        />
 
-                    <Stack mt='6' spacing='3'>
-                        <Heading size='md'>{game4.name}</Heading>
-                        <Text>
-                            {game4.description}
-                        </Text>
-                    </Stack>
-                </CardBody>
-                <Divider />
-            </Card>
-            <Card maxW='sm'>
-                <CardBody>
+                        <Stack mt='6' spacing='3'>
+                            <Heading size='md'>{game4.name}</Heading>
+                            <Text>
+                                {game4.description}
+                            </Text>
+                        </Stack>
+                    </CardBody>
+                    <Divider />
+                </Card>
+                <Card maxW='sm'>
+                    <CardBody>
 
-                    <Image
-                        src={game5.image}
-                        alt='Among Us game image'
-                        borderRadius='lg'
-                        style={{ width: '100%' }}
-                    />
+                        <Image
+                            src={game5.image}
+                            alt='Among Us game image'
+                            borderRadius='lg'
+                            style={{ width: '100%' }}
+                        />
 
-                    <Stack mt='6' spacing='3'>
-                        <Heading size='md'>{game5.name}</Heading>
-                        <Text>
-                            {game5.description}
-                        </Text>
-                    </Stack>
-                </CardBody>
-                <Divider />
-            </Card> <Card maxW='sm'>
-                <CardBody>
+                        <Stack mt='6' spacing='3'>
+                            <Heading size='md'>{game5.name}</Heading>
+                            <Text>
+                                {game5.description}
+                            </Text>
+                        </Stack>
+                    </CardBody>
+                    <Divider />
+                </Card> <Card maxW='sm'>
+                    <CardBody>
 
-                    <Image
-                        src={game6.image}
-                        alt='Among Us game image'
-                        borderRadius='lg'
-                        style={{ width: '100%' }}
-                    />
+                        <Image
+                            src={game6.image}
+                            alt='Among Us game image'
+                            borderRadius='lg'
+                            style={{ width: '100%' }}
+                        />
 
-                    <Stack mt='6' spacing='3'>
-                        <Heading size='md'>{game6.name}</Heading>
-                        <Text>
-                            {game6.description}
-                        </Text>
-                    </Stack>
-                </CardBody>
-                <Divider />
-            </Card>
-            <Card maxW='sm'>
-                <CardBody>
+                        <Stack mt='6' spacing='3'>
+                            <Heading size='md'>{game6.name}</Heading>
+                            <Text>
+                                {game6.description}
+                            </Text>
+                        </Stack>
+                    </CardBody>
+                    <Divider />
+                </Card>
+                <Card maxW='sm'>
+                    <CardBody>
 
-                    <Image
-                        src={game7.image}
-                        alt='Among Us game image'
-                        borderRadius='lg'
-                        style={{ width: '100%' }}
-                    />
+                        <Image
+                            src={game7.image}
+                            alt='Among Us game image'
+                            borderRadius='lg'
+                            style={{ width: '100%' }}
+                        />
 
-                    <Stack mt='6' spacing='3'>
-                        <Heading size='md'>{game7.name}</Heading>
-                        <Text>
-                            {game7.description}
-                        </Text>
-                    </Stack>
-                </CardBody>
-                <Divider />
-            </Card>
-            <Card maxW='sm'>
-                <CardBody>
+                        <Stack mt='6' spacing='3'>
+                            <Heading size='md'>{game7.name}</Heading>
+                            <Text>
+                                {game7.description}
+                            </Text>
+                        </Stack>
+                    </CardBody>
+                    <Divider />
+                </Card>
+                <Card maxW='sm'>
+                    <CardBody>
 
-                    <Image
-                        src={game8.image}
-                        alt='Among Us game image'
-                        borderRadius='lg'
-                        style={{ width: '100%' }}
-                    />
+                        <Image
+                            src={game8.image}
+                            alt='Among Us game image'
+                            borderRadius='lg'
+                            style={{ width: '100%' }}
+                        />
 
-                    <Stack mt='6' spacing='3'>
-                        <Heading size='md'>{game8.name}</Heading>
-                        <Text>
-                            {game8.description}
-                        </Text>
-                    </Stack>
-                </CardBody>
-                <Divider />
-            </Card>
-            <Card maxW='sm'>
-                <CardBody>
+                        <Stack mt='6' spacing='3'>
+                            <Heading size='md'>{game8.name}</Heading>
+                            <Text>
+                                {game8.description}
+                            </Text>
+                        </Stack>
+                    </CardBody>
+                    <Divider />
+                </Card>
+                <Card maxW='sm'>
+                    <CardBody>
 
-                    <Image
-                        src={game9.image}
-                        alt='Among Us game image'
-                        borderRadius='lg'
-                        style={{ width: '100%' }}
-                    />
+                        <Image
+                            src={game9.image}
+                            alt='Among Us game image'
+                            borderRadius='lg'
+                            style={{ width: '100%' }}
+                        />
 
-                    <Stack mt='6' spacing='3'>
-                        <Heading size='md'>{game9.name}</Heading>
-                        <Text>
-                            {game9.description}
-                        </Text>
-                    </Stack>
-                </CardBody>
-                <Divider />
-            </Card>
-            <Card maxW='sm'>
-                <CardBody>
+                        <Stack mt='6' spacing='3'>
+                            <Heading size='md'>{game9.name}</Heading>
+                            <Text>
+                                {game9.description}
+                            </Text>
+                        </Stack>
+                    </CardBody>
+                    <Divider />
+                </Card>
+                <Card maxW='sm'>
+                    <CardBody>
 
-                    <Image
-                        src={game10.image}
-                        alt='Among Us game image'
-                        borderRadius='lg'
-                        style={{ width: '100%' }}
-                    />
+                        <Image
+                            src={game10.image}
+                            alt='Among Us game image'
+                            borderRadius='lg'
+                            style={{ width: '100%' }}
+                        />
 
-                    <Stack mt='6' spacing='3'>
-                        <Heading size='md'>{game10.name}</Heading>
-                        <Text>
-                            {game10.description}
-                        </Text>
-                    </Stack>
-                </CardBody>
-                <Divider />
-            </Card>
+                        <Stack mt='6' spacing='3'>
+                            <Heading size='md'>{game10.name}</Heading>
+                            <Text>
+                                {game10.description}
+                            </Text>
+                        </Stack>
+                    </CardBody>
+                    <Divider />
+                </Card>
 
-            <Card maxW='sm'>
-                <CardBody>
+                <Card maxW='sm'>
+                    <CardBody>
 
-                    <Image
-                        src={game11.image}
-                        alt='Among Us game image'
-                        borderRadius='lg'
-                        style={{ width: '100%' }}
-                    />
+                        <Image
+                            src={game11.image}
+                            alt='Among Us game image'
+                            borderRadius='lg'
+                            style={{ width: '100%' }}
+                        />
 
-                    <Stack mt='6' spacing='3'>
-                        <Heading size='md'>{game11.name}</Heading>
-                        <Text>
-                            {game11.description}
-                        </Text>
-                    </Stack>
-                </CardBody>
-                <Divider />
-            </Card>
-            <Card maxW='sm'>
-                <CardBody>
+                        <Stack mt='6' spacing='3'>
+                            <Heading size='md'>{game11.name}</Heading>
+                            <Text>
+                                {game11.description}
+                            </Text>
+                        </Stack>
+                    </CardBody>
+                    <Divider />
+                </Card>
+                <Card maxW='sm'>
+                    <CardBody>
 
-                    <Image
-                        src={game12.image}
-                        alt='Among Us game image'
-                        borderRadius='lg'
-                        style={{ width: '100%' }}
-                    />
+                        <Image
+                            src={game12.image}
+                            alt='Among Us game image'
+                            borderRadius='lg'
+                            style={{ width: '100%' }}
+                        />
 
-                    <Stack mt='6' spacing='3'>
-                        <Heading size='md'>{game12.name}</Heading>
-                        <Text>
-                            {game12.description}
-                        </Text>
-                    </Stack>
-                </CardBody>
-                <Divider />
-            </Card>
+                        <Stack mt='6' spacing='3'>
+                            <Heading size='md'>{game12.name}</Heading>
+                            <Text>
+                                {game12.description}
+                            </Text>
+                        </Stack>
+                    </CardBody>
+                    <Divider />
+                </Card>
 
-            <Card maxW='sm'>
-                <CardBody>
+                <Card maxW='sm'>
+                    <CardBody>
 
-                    <Image
-                        src={game13.image}
-                        alt='Among Us game image'
-                        borderRadius='lg'
-                        style={{ width: '100%' }}
-                    />
+                        <Image
+                            src={game13.image}
+                            alt='Among Us game image'
+                            borderRadius='lg'
+                            style={{ width: '100%' }}
+                        />
 
-                    <Stack mt='6' spacing='3'>
-                        <Heading size='md'>{game13.name}</Heading>
-                        <Text>
-                            {game13.description}
-                        </Text>
-                    </Stack>
-                </CardBody>
-                <Divider />
-            </Card>
-            <Card maxW='sm'>
-                <CardBody>
+                        <Stack mt='6' spacing='3'>
+                            <Heading size='md'>{game13.name}</Heading>
+                            <Text>
+                                {game13.description}
+                            </Text>
+                        </Stack>
+                    </CardBody>
+                    <Divider />
+                </Card>
+                <Card maxW='sm'>
+                    <CardBody>
 
-                    <Image
-                        src={game14.image}
-                        alt='Among Us game image'
-                        borderRadius='lg'
-                        style={{ width: '100%' }}
-                    />
+                        <Image
+                            src={game14.image}
+                            alt='Among Us game image'
+                            borderRadius='lg'
+                            style={{ width: '100%' }}
+                        />
 
-                    <Stack mt='6' spacing='3'>
-                        <Heading size='md'>{game14.name}</Heading>
-                        <Text>
-                            {game14.description}
-                        </Text>
-                    </Stack>
-                </CardBody>
-                <Divider />
-            </Card>
+                        <Stack mt='6' spacing='3'>
+                            <Heading size='md'>{game14.name}</Heading>
+                            <Text>
+                                {game14.description}
+                            </Text>
+                        </Stack>
+                    </CardBody>
+                    <Divider />
+                </Card>
+            </Flex>
         </div>
     );
 }
