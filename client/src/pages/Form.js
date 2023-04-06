@@ -5,9 +5,10 @@ import {
     FormHelperText,
     Input,
     Button,
+    Select
   } from '@chakra-ui/react'
 
-  import { Field, Form, Formik } from 'formik';
+import { Field, Form, Formik } from 'formik';
 
 export default function FormikGame() {
     function validateName(value) {
@@ -31,7 +32,27 @@ export default function FormikGame() {
         }}
       >
         {(props) => (
-          <Form>
+            <Form>
+            <FormControl>
+                <FormLabel>Game</FormLabel>
+                <Select placeholder='Select game'>
+                <option>Among Us</option>
+                <option>Goose Goose Duck</option>
+                <option>PUBG: Battlegrounds</option>
+                <option>Apex Legends</option>
+                <option>Grand Theft Auto V</option>
+                <option>Civilization VI</option>
+                <option>Elden Ring</option>
+                <option>Stardew Valley</option>
+                <option>Rocket League</option>
+                <option>Final Fantasy XIV</option>
+                <option>Red Dead Redemption II</option>
+                <option>The Elder Scrolls V: Skyrim</option>
+                <option>Dead By Daylight</option>
+                <option>Sims 4</option>
+                <option>Other</option>
+            </Select>
+            </FormControl>
             <Field name='name' validate={validateName}>
               {({ field, form }) => (
                 <FormControl isInvalid={form.errors.name && form.touched.name}>
