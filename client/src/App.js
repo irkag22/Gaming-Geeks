@@ -13,6 +13,7 @@ import Login from './pages/Login';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import { Form } from 'react-router-dom';
+import Content from './components/Content';
 
 // Construct our main GraphQL API endpoint
 const httpLink = createHttpLink({
@@ -45,8 +46,9 @@ function App() {
   return (
     <div className="App">
       <ChakraProvider>
-        <Header />
-
+        <Header /> 
+        <Content/>
+        <Login/>
         <Footer />
       </ChakraProvider>
     </div>
