@@ -1,6 +1,7 @@
 const { AuthenticationError } = require('apollo-server-express');
 const { User, Post } = require('../models'); // User, Post, Game
 const { signToken } = require('../utils/auth');
+const { post } = require('../models/Comment');
 
 const resolvers = {
     Query: {
@@ -42,7 +43,6 @@ const resolvers = {
 
         addPost: async (parent, { postText, postGamer }) => {
           const post = await Post.create({ postText, postGamer });
-
           await User.findOneAndUpdate(
             { _id: postGamer },
             { $addToSet: { posts: post._id } }
@@ -51,18 +51,22 @@ const resolvers = {
           return post;
         },
         },
-        removePost: async (parent, { postText, postGamer}) => {
-            const post = await Post.findOneAndDelete({
-              _id: postGamer,
-              postText: context.user.username,
-            });
     
-            await User.findOneAndUpdate(
-              { _id: postGamer },
-              { $pull: { posts: post._id } }
-            );
-    
-            return post;
-},
-
-module.exports = resolvers;          
+          Mutation: {
+            removePost: async (parent, { postText, postGamer }) => {
+              const post = await Post.findOneAndDelete({
+                _id: postGamer,
+                postText: postText,
+              });
+        
+              await User.findOneAndUpdate(
+                { _id: postGamer },
+                { $pull: { posts: post._id } }
+              );
+        
+              return post;
+            },
+          },
+        };
+        
+        module.exports = resolvers;
