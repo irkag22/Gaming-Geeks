@@ -15,6 +15,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Header from './components/Header';
 import Footer from './components/Footer';
 //import { Form } from 'react-router-dom';
+import Content from './components/Content';
 
 // Construct our main GraphQL API endpoint
 const httpLink = createHttpLink({
