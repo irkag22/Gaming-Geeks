@@ -9,6 +9,7 @@ import { ApolloClient, InMemoryCache, ApolloProvider, createHttpLink } from '@ap
 import { setContext } from '@apollo/client/link/context';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
+import { Container } from '@chakra-ui/react';
 //import Home from './pages/Home';
 //import Signup from './pages/Signup';
 //import Login from './pages/Login';
@@ -54,8 +55,10 @@ function App() {
       
     <ApolloProvider client={client}>
       <ChakraProvider>
-        <Header />
-        <Footer />
+        <Container>
+          <Header />
+          <Footer />
+        </Container>
       </ChakraProvider>
     </ApolloProvider>
 

@@ -1,6 +1,6 @@
 import React from 'react';
 import './style.css';
-import { Tabs, TabList, TabPanels, Tab, TabPanel } from '@chakra-ui/react'
+import { Tabs, TabList, TabPanels, Tab, TabPanel, Center, Flex } from '@chakra-ui/react'
 import Logo from '../../assets/gg-logo.png'
 
 
@@ -15,8 +15,6 @@ import Signup from '../../pages/Signup';
 
 import Auth from '../../utils/auth';
 
-import { Center, Flex } from '@chakra-ui/react'
-
 function Header() {
 
     const isLoggedIn = Auth.loggedIn();
@@ -27,7 +25,7 @@ function Header() {
 
                 <img className="img" src={Logo} alt="project" width="200" height="200"></img>
 
-                <Tabs variant='soft-rounded' colorScheme='green'>
+                <Tabs align="center" variant='soft-rounded' colorScheme='green'>
                     <TabList>
                         <Tab>Home</Tab>
                         <Tab>Profile</Tab>
