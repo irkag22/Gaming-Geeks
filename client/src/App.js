@@ -1,18 +1,20 @@
 import './App.css';
 import { ChakraProvider } from '@chakra-ui/react';
-import * as React from 'react';
+//import * as React from 'react';
+import React, { useState } from 'react';
+
 import { useEffect } from 'react';
 // import React from 'react';
 import { ApolloClient, InMemoryCache, ApolloProvider, createHttpLink } from '@apollo/client';
 import { setContext } from '@apollo/client/link/context';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
-import Home from './pages/Home';
-import Signup from './pages/Signup';
-import Login from './pages/Login';
+//import Home from './pages/Home';
+//import Signup from './pages/Signup';
+//import Login from './pages/Login';
 import Header from './components/Header';
 import Footer from './components/Footer';
-import { Form } from 'react-router-dom';
+//import { Form } from 'react-router-dom';
 
 // Construct our main GraphQL API endpoint
 const httpLink = createHttpLink({
@@ -38,17 +40,24 @@ const client = new ApolloClient({
   cache: new InMemoryCache(),
 });
 
+
+
+
 function App() {
+
   useEffect(() => {
     document.title = 'Gaming Geeks';
   });
   return (
     <div className="App">
+      
+    <ApolloProvider client={client}>
       <ChakraProvider>
         <Header />
-
         <Footer />
       </ChakraProvider>
+    </ApolloProvider>
+
     </div>
   );
 }
