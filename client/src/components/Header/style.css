@@ -1,3 +1,6 @@
-header {
-    text-align: center;
+p {
+    border: solid 1px rgb(204, 204, 204);
+    border-radius: 5px;
+    padding: 10px;
+    margin: 20px;
 }
