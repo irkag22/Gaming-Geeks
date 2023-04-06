@@ -52,7 +52,6 @@ function Header() {
                         </TabPanel>
                         <TabPanel>
                             <Games />
-                            <FormikGame />
                         </TabPanel>
                         <TabPanel>
                             <FormikGame />
