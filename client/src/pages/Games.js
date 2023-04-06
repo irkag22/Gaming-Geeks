@@ -13,8 +13,6 @@ import {
     Flex
 } from '@chakra-ui/react';
 
-
-
 const game1 = {
     name: "Among Us",
     description: "An online and local party game of teamwork and betrayal for 4-15 players...in space!",
