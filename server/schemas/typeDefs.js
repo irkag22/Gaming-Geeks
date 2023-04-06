@@ -33,6 +33,7 @@ const typeDefs = gql`
     addUser(username: String!, email: String!, password: String!): Auth
     login(email: String!, password: String!): Auth
     addPost(postText: String!, postGamer: ID!): Post
+    removePost(postId: ID!): Post
   }
 `;
 

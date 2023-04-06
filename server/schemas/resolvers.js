@@ -51,5 +51,18 @@ const resolvers = {
           return post;
         },
         },
-};
-module.exports = resolvers;
+        removePost: async (parent, { postText, postGamer}) => {
+            const post = await Post.findOneAndDelete({
+              _id: postGamer,
+              postText: context.user.username,
+            });
+    
+            await User.findOneAndUpdate(
+              { _id: postGamer },
+              { $pull: { posts: post._id } }
+            );
+    
+            return post;
+},
+
+module.exports = resolvers;          
