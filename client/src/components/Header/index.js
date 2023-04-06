@@ -14,13 +14,18 @@ import Signup from '../../pages/Signup';
 
 import Auth from '../../utils/auth';
 
+import { Center } from '@chakra-ui/react'
+
 function Header() {
     
     const isLoggedIn = Auth.loggedIn();
 
     return (
         <header>
+            <Center h="50vh">
             <img className="img" src={Logo} alt="project" width="200" height="200"></img>
+            </Center>
+            <Center h="10vh">
             <Tabs variant='soft-rounded' colorScheme='green'>
                 <TabList>
                     <Tab>Home</Tab>
@@ -62,6 +67,7 @@ function Header() {
                     </TabPanel>
                 </TabPanels>
             </Tabs>
+            </Center>
         </header>
     );
 }
