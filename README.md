@@ -77,6 +77,8 @@
 - **Wireframe:** [Figma](https://www.figma.com/file/mok73ijUzazReU9TcMUoUt/Untitled?node-id=102-5&t=Ji55dmf60ghD1Sqn-0)
 - **Color Palette:** [Coolors](https://coolors.co/)
 - **Emojis:** [Emoji Cheat Sheet](https://github.com/ikatyang/emoji-cheat-sheet/blob/master/README.md)
+- **Image Resizer:** For application logos in *public* folder [Simple Image Resizer](https://www.simpleimageresizer.com/)
+- **Icons:** [Icon Finder](https://www.iconfinder.com/)
 
 ## :tornado: Challenges
 - (Challenge here)

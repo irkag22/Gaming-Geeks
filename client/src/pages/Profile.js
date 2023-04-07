@@ -1,8 +1,10 @@
+import Auth from '../utils/auth';
+
 function Profile() {
     return (
         <div>
-            <h1>PROFILE</h1>
-            <p>Welcome to your profile page! Please use the tabs above to navigate.</p>
+          <p>Welcome {Auth.getProfile().data.username}!</p> <br />
+          <p>Please use tabs above to navigate. Happy Gaming!</p>
         </div>
     );
 }
