@@ -1,5 +1,7 @@
 .App {
   text-align: center;
+  background-color: #282c34;
+  color: #ffffff;
 }
 
 .App-logo {
@@ -7,10 +9,10 @@
   pointer-events: none;
 }
 
-.img{
-    width: 130px;
-    height: 110px;
-    
+.img {
+  width: 130px;
+  height: 110px;
+
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -38,7 +40,31 @@
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
+}
+
+body {
+  background-color: #282c34;
+  color: #ffffff;
+}
+
+header {
+  background-color: #282c34;
+  color: #ffffff;
+
+}
+
+html {
+
+  background-color: #282c34;
+  color: #ffffff;
+
+}
+
+footer {
+  background-color: #282c34;
+  color: #ffffff;
 }
