@@ -47,8 +47,8 @@ export default function ChatForm() {
                   <p>{post.postText}</p>
                   <p>Posted on: {post.createdAt}</p>
                   {/* Need functionality to edit and delete post: */}
-                  <p>Edit</p>
-                  <p>Delete</p>
+                  <button onClick={ }>Edit</button>
+                  <button on Click={ }>Delete</button>
                   <hr />
                 </div>
               ))}
@@ -56,7 +56,7 @@ export default function ChatForm() {
           )}
         </div>
       </div>
-      
+
       {/* Form to submit cht entries */}
       <form>
         <label htmlFor="message">Chat:</label>
