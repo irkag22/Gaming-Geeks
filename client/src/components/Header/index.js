@@ -1,9 +1,7 @@
 import React from 'react';
-import './style.css';
-import { Tabs, TabList, TabPanels, Tab, TabPanel, Center, Flex } from '@chakra-ui/react'
-import Logo from '../../assets/gg-logo.png'
-
-
+import { Tabs, TabList, TabPanels, Tab, TabPanel, Center, Flex } from '@chakra-ui/react';
+// import Logo from '../../assets/gg-logo.png';
+import Logos from '../../assets/gaming-g.png';
 import Home from '../../pages/Home';
 import Gamers from '../../pages/Gamers';
 import Games from '../../pages/Games';
@@ -15,6 +13,11 @@ import Signup from '../../pages/Signup';
 
 import Auth from '../../utils/auth';
 
+
+import './style.css';
+
+
+
 function Header() {
 
     const isLoggedIn = Auth.loggedIn();
@@ -23,9 +26,9 @@ function Header() {
         <header>
             <Flex direction="column" align="center">
 
-                <img className="img" src={Logo} alt="project" width="200" height="200"></img>
+                <img className="img" src={Logos} alt="project" width="200" height="200"></img>
 
-                <Tabs align="center" variant='soft-rounded' colorScheme='green'>
+                <Tabs className="white-tabs" align="center" variant='soft-rounded' colorScheme='cyan'>
                     <TabList>
                         <Tab key="1">Home</Tab>
 
@@ -56,9 +59,9 @@ function Header() {
                     </TabPanels>
                 </Tabs>
 
-            </Flex>
-        </header>
-    );
+       </Flex> 
+    </header>
+  );
 }
-export default Header;
 
+export default Header;
