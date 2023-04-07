@@ -16,7 +16,10 @@ export const QUERY_POSTS = gql`
     posts {
       _id
       postText
-      postGamer
+      postGamer {
+        _id
+        username
+      }
       createdAt
     }
   }
