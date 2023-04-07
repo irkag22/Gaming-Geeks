@@ -51,5 +51,5 @@ mutation Mutation($postText: String!, $postGamer: ID!) {
     postGamer
     postText 
     createdAt
-}
+  }
 }`
