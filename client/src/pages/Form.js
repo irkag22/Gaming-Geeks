@@ -77,8 +77,7 @@ export default function ChatForm() {
                   <p>{post.postText}</p>
                   <p>Posted on: {post.createdAt}</p>
                   {/* Need functionality to edit and delete post: */}
-                  <button onClick={() => updateHandle(post._id)}>Edit</button>
-                  <button onClick={() => deleteHandle(post._id)}>Delete</button>
+                  <button onClick={() => updateHandle(post._id)}>Edit</button> | <button onClick={() => deleteHandle(post._id)}>Delete</button>
                   <hr />
                 </div>
               ))}
