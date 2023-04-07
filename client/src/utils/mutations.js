@@ -29,7 +29,10 @@ mutation Mutation($postText: String!) {
   addPost(postText: $postText) {
     _id
     postText
-    postGamer
+    postGamer {
+      _id
+      username
+    }
     createdAt
   }
 }`
