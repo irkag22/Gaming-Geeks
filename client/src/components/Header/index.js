@@ -27,49 +27,30 @@ function Header() {
 
                 <Tabs align="center" variant='soft-rounded' colorScheme='green'>
                     <TabList>
-                        <Tab>Home</Tab>
-                        <Tab>Profile</Tab>
-                        <Tab>Games</Tab>
-                        <Tab>Chat</Tab>
-                        <Tab>Gamers</Tab>
+                        <Tab key="1">Home</Tab>
 
-
-                        {isLoggedIn ? (
-                            <Tab>Logout</Tab>
-                        ) : (
-                            <Tab>Login</Tab>
-                        )}
-                        <Tab>Signup</Tab>
-
-                        <Tab>Install</Tab>
+                        {isLoggedIn && <Tab key="2">Profile</Tab>}
+                        {isLoggedIn &&<Tab key="3">Games</Tab>}
+                        {isLoggedIn && <Tab key="4">Chat</Tab>}
+                        {isLoggedIn && <Tab key="5">Gamers</Tab>}
+                        {isLoggedIn && <Tab key="6">Logout</Tab>}
+                        {!isLoggedIn && <Tab key="7">Login</Tab>}
+                        {!isLoggedIn && <Tab key="8">Signup</Tab>}
+ 
+                        <Tab key="9">Install</Tab>
                     </TabList>
                     <TabPanels>
-                        <TabPanel>
-                            <Home />
-                        </TabPanel>
-                        <TabPanel>
-                            <Profile />
-                        </TabPanel>
-                        <TabPanel>
-                            <Games />
-                        </TabPanel>
-                        <TabPanel>
-                            <FormikGame />
-                        </TabPanel>
-                        <TabPanel>
-                            <Gamers />
-                        </TabPanel>
-                        <TabPanel>
-                            {isLoggedIn ? (
-                                <Logout />
-                            ) : (
-                                <Login />
-                            )}
-                        </TabPanel>
-                        <TabPanel>
-                            <Signup />
-                        </TabPanel>
-                        <TabPanel>
+                        <TabPanel key="1"><Home /></TabPanel>
+
+                        {isLoggedIn && <TabPanel key="2"><Profile /></TabPanel>}
+                        {isLoggedIn && <TabPanel key="3"><Games /></TabPanel>}
+                        {isLoggedIn && <TabPanel key="4"><FormikGame /></TabPanel>}
+                        {isLoggedIn && <TabPanel key="5"><Gamers /></TabPanel>}
+                        {isLoggedIn && <TabPanel key="6"><Logout /></TabPanel>}
+                        {!isLoggedIn && <TabPanel key="7"><Login /></TabPanel>}
+                        {!isLoggedIn && <TabPanel key="8"><Signup /></TabPanel>}
+
+                        <TabPanel key="9">
                             {/* <Install /> */}
                         </TabPanel>
                     </TabPanels>
