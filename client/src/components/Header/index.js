@@ -13,51 +13,53 @@ import Signup from '../../pages/Signup';
 
 import Auth from '../../utils/auth';
 
+
 import './style.css';
 
+
+
 function Header() {
-  const isLoggedIn = Auth.loggedIn();
 
-  return (
-    <header>
-      <Flex direction="column" align="center">
-        <img className="img" src={Logos} alt="project" width="200" height="200"></img>
+    const isLoggedIn = Auth.loggedIn();
 
-        <Tabs align="center" variant='soft-rounded' colorScheme='cyan'>
-          <TabList className="white-tabs">
-            <Tab>Home</Tab>
-            <Tab>Profile</Tab>
-            <Tab>Games</Tab>
-            <Tab>Chat</Tab>
-            <Tab>Gamers</Tab>
-            {isLoggedIn ? <Tab>Logout</Tab> : <Tab>Login</Tab>}
-            <Tab>Signup</Tab>
-            <Tab>Install</Tab>
-          </TabList>
-          <TabPanels>
-            <TabPanel>
-              <Home />
-            </TabPanel>
-            <TabPanel>
-              <Profile />
-            </TabPanel>
-            <TabPanel>
-              <Games />
-            </TabPanel>
-            <TabPanel>
-              <FormikGame />
-            </TabPanel>
-            <TabPanel>
-              <Gamers />
-            </TabPanel>
-            <TabPanel>{isLoggedIn ? <Logout /> : <Login />}</TabPanel>
-            <TabPanel>
-              <Signup />
-            </TabPanel>
-            <TabPanel>{/* <Install /> */}</TabPanel>
-          </TabPanels>
-        </Tabs>
-      </Flex>
+    return (
+        <header>
+            <Flex direction="column" align="center">
+
+                <img className="img" src={Logos} alt="project" width="200" height="200"></img>
+
+                <Tabs className="white-tabs" align="center" variant='soft-rounded' colorScheme='cyan'>
+                    <TabList>
+                        <Tab key="1">Home</Tab>
+
+                        {isLoggedIn && <Tab key="2">Profile</Tab>}
+                        {isLoggedIn &&<Tab key="3">Games</Tab>}
+                        {isLoggedIn && <Tab key="4">Chat</Tab>}
+                        {isLoggedIn && <Tab key="5">Gamers</Tab>}
+                        {isLoggedIn && <Tab key="6">Logout</Tab>}
+                        {!isLoggedIn && <Tab key="7">Login</Tab>}
+                        {!isLoggedIn && <Tab key="8">Signup</Tab>}
+ 
+                        <Tab key="9">Install</Tab>
+                    </TabList>
+                    <TabPanels>
+                        <TabPanel key="1"><Home /></TabPanel>
+
+                        {isLoggedIn && <TabPanel key="2"><Profile /></TabPanel>}
+                        {isLoggedIn && <TabPanel key="3"><Games /></TabPanel>}
+                        {isLoggedIn && <TabPanel key="4"><FormikGame /></TabPanel>}
+                        {isLoggedIn && <TabPanel key="5"><Gamers /></TabPanel>}
+                        {isLoggedIn && <TabPanel key="6"><Logout /></TabPanel>}
+                        {!isLoggedIn && <TabPanel key="7"><Login /></TabPanel>}
+                        {!isLoggedIn && <TabPanel key="8"><Signup /></TabPanel>}
+
+                        <TabPanel key="9">
+                            {/* <Install /> */}
+                        </TabPanel>
+                    </TabPanels>
+                </Tabs>
+
+       </Flex> 
     </header>
   );
 }
