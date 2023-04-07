@@ -14,6 +14,9 @@ const resolvers = {
       const params = username ? { username } : {};
       return Post.find(params).sort({ createdAt: -1 });
     },
+    post: async (parent, { postId }) => {
+      return Post.findById(postId);
+    },
   },
 
   Mutation: {
@@ -40,7 +43,7 @@ const resolvers = {
       return { token, user };
     },
 
-    addPost: async (parent, { postText }, context ) => {
+    addPost: async (parent, { postText }, context) => {
 
       const post = await Post.create({ postText, postGamer: context.user._id });
       await User.findOneAndUpdate(
@@ -52,7 +55,6 @@ const resolvers = {
     },
     removePost: async (parent, { postId }, context) => {
       if (!context.user) return null;
-      console.log('USER', context.user);
       const post = await Post.findOneAndDelete({
         _id: postId,
         postGamer: context.user._id,
@@ -65,6 +67,23 @@ const resolvers = {
 
       return post;
     },
+    updatePost: async (parent, { postId, postText }, context) => {
+      if (!context.user) {
+        throw new AuthenticationError('Please log in to update your posts');
+      }
+
+      const post = await Post.findOneAndUpdate(
+        { _id: postId, postGamer: context.user._id },
+        { postText },
+        { new: true }
+      );
+
+      if (!post) {
+        throw new Error('No post found');
+      }
+
+      return post;
+    }
   },
 }
 

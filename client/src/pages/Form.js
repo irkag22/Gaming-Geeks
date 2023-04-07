@@ -1,13 +1,15 @@
 import { useState } from 'react';
-import { ADD_POST } from '../utils/mutations';
 import { useMutation, useQuery } from '@apollo/client';
 import React from 'react';
 import { QUERY_POSTS } from '../utils/queries';
+import { ADD_POST, UPDATE_POST, REMOVE_POST } from '../utils/mutations';
 
 export default function ChatForm() {
   const [gameText, setGameText] = useState('');
   const { loading, data } = useQuery(QUERY_POSTS);
-  const [addPost, { error }] = useMutation(ADD_POST);
+  const [addPost, { error: postError }] = useMutation(ADD_POST);
+  const [removePost, { error: removePostError }] = useMutation(REMOVE_POST);
+  const [updatePost, { error: updatePostError }] = useMutation(UPDATE_POST);
 
   const posts = data?.posts || [];
 
@@ -30,6 +32,29 @@ export default function ChatForm() {
     }
   }
 
+  async function deleteHandle(postId) {
+    try {
+      const { data } = await removePost({
+        variables: { postId },
+        refetchQueries: [{ query: QUERY_POSTS }],
+      });
+      // console.log(data);
+    } catch (error) {
+      console.log('error');
+    }
+  }
+
+  async function updateHandle(postId) {
+    try {
+      const { data } = await updatePost({
+        variables: { postId },
+        refetchQueries: [{ query: QUERY_POSTS }],
+      })
+    } catch (error) {
+      console.log('error')
+    }
+  }
+
   return (
     <div>
 
@@ -47,8 +72,8 @@ export default function ChatForm() {
                   <p>{post.postText}</p>
                   <p>Posted on: {post.createdAt}</p>
                   {/* Need functionality to edit and delete post: */}
-                  <p>Edit</p>
-                  <p>Delete</p>
+                  <button onClick={() => updateHandle(post._id)}>Edit</button>
+                  <button onClick={() => deleteHandle(post._id)}>Delete</button>
                   <hr />
                 </div>
               ))}
@@ -56,7 +81,7 @@ export default function ChatForm() {
           )}
         </div>
       </div>
-      
+
       {/* Form to submit cht entries */}
       <form>
         <label htmlFor="message">Chat:</label>
