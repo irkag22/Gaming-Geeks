@@ -52,7 +52,7 @@ const resolvers = {
     },
     removePost: async (parent, { postId }, context) => {
       if (!context.user) return null;
-      console.log('USER', context.user);
+      // console.log('USER', context.user);
       const post = await Post.findOneAndDelete({
         _id: postId,
         postGamer: context.user._id,
@@ -65,6 +65,23 @@ const resolvers = {
 
       return post;
     },
+    updatePost: async (parent, { postId, postText }, context) => {
+      if (!context.user) {
+        throw new AuthenticationError('Please log in to update your posts');
+      }
+
+      const post = await Post.findOneAndUpdate(
+        { _id: postId, postGamer: context.user._id },
+        { postText },
+        { new: true }
+      );
+
+      if (!post) {
+        throw new Error('No post found');
+      }
+
+      return post;
+    }
   },
 }
 
