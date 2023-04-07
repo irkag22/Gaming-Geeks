@@ -1,7 +1,7 @@
 import React from 'react';
 import { Tabs, TabList, TabPanels, Tab, TabPanel, Center, Flex } from '@chakra-ui/react';
-import Logo from '../../assets/gg-logo.png';
-
+// import Logo from '../../assets/gg-logo.png';
+import Logos from '../../assets/gaming-g.png';
 import Home from '../../pages/Home';
 import Gamers from '../../pages/Gamers';
 import Games from '../../pages/Games';
@@ -21,7 +21,7 @@ function Header() {
   return (
     <header>
       <Flex direction="column" align="center">
-        <img className="img" src={Logo} alt="project" width="200" height="200"></img>
+        <img className="img" src={Logos} alt="project" width="200" height="200"></img>
 
         <Tabs align="center" variant='soft-rounded' colorScheme='cyan'>
           <TabList className="white-tabs">
