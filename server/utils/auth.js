@@ -15,6 +15,8 @@ module.exports = {
       return req;
     }
 
+    console.log('TOKEN', tokem);
+
     try {
       const { data } = jwt.verify(token, secret, { maxAge: expiration });
       req.user = data;

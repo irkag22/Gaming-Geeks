@@ -32,4 +32,24 @@ mutation Mutation($postText: String!) {
     postGamer
     createdAt
   }
+}`;
+
+export const REMOVE_POST = gql`
+mutation Mutation($postId: ID!) {
+  removePost(postId: $postId) {
+    _id
+    postGamer
+    postText
+    createdAt
+  }
+}`;
+
+export const UPDATE_POST = gql`
+mutation Mutation($postText: String!, $postGamer: ID!) {
+  updatePost(postText: $postText, postGamer: $postGamer) {
+    _id
+    postGamer
+    postText 
+    createdAt
+}
 }`

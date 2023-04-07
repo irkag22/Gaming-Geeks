@@ -40,7 +40,7 @@ const resolvers = {
       return { token, user };
     },
 
-    addPost: async (parent, { postText }, context ) => {
+    addPost: async (parent, { postText }, context) => {
 
       const post = await Post.create({ postText, postGamer: context.user._id });
       await User.findOneAndUpdate(
@@ -52,7 +52,6 @@ const resolvers = {
     },
     removePost: async (parent, { postId }, context) => {
       if (!context.user) return null;
-      // console.log('USER', context.user);
       const post = await Post.findOneAndDelete({
         _id: postId,
         postGamer: context.user._id,
