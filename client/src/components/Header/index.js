@@ -1,8 +1,6 @@
 import React from 'react';
-import './style.css';
-import { Tabs, TabList, TabPanels, Tab, TabPanel, Center, Flex } from '@chakra-ui/react'
-import Logo from '../../assets/gg-logo.png'
-
+import { Tabs, TabList, TabPanels, Tab, TabPanel, Center, Flex } from '@chakra-ui/react';
+import Logo from '../../assets/gg-logo.png';
 
 import Home from '../../pages/Home';
 import Gamers from '../../pages/Gamers';
@@ -14,6 +12,10 @@ import Logout from '../../pages/Logout';
 import Signup from '../../pages/Signup';
 
 import Auth from '../../utils/auth';
+
+
+import './style.css';
+
 
 function Header() {
 
@@ -56,9 +58,44 @@ function Header() {
                     </TabPanels>
                 </Tabs>
 
-            </Flex>
-        </header>
-    );
-}
-export default Header;
 
+        <Tabs align="center" variant='soft-rounded' colorScheme='cyan'>
+          <TabList className="white-tabs">
+            <Tab>Home</Tab>
+            <Tab>Profile</Tab>
+            <Tab>Games</Tab>
+            <Tab>Chat</Tab>
+            <Tab>Gamers</Tab>
+            {isLoggedIn ? <Tab>Logout</Tab> : <Tab>Login</Tab>}
+            <Tab>Signup</Tab>
+            <Tab>Install</Tab>
+          </TabList>
+          <TabPanels>
+            <TabPanel>
+              <Home />
+            </TabPanel>
+            <TabPanel>
+              <Profile />
+            </TabPanel>
+            <TabPanel>
+              <Games />
+            </TabPanel>
+            <TabPanel>
+              <FormikGame />
+            </TabPanel>
+            <TabPanel>
+              <Gamers />
+            </TabPanel>
+            <TabPanel>{isLoggedIn ? <Logout /> : <Login />}</TabPanel>
+            <TabPanel>
+              <Signup />
+            </TabPanel>
+            <TabPanel>{/* <Install /> */}</TabPanel>
+          </TabPanels>
+        </Tabs>
+      </Flex>
+    </header>
+  );
+}
+
+export default Header;

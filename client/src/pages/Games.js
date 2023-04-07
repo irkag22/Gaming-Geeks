@@ -103,7 +103,7 @@ export default function Game() {
     return (
         <Grid templateColumns='repeat(2, 1fr)' gap={6}>
             <GridItem>
-                <Card maxW='sm' style={{ height: '100%', backgroundColor: '#F0FFF4' }}>
+                <Card maxW='sm' style={{ height: '100%', backgroundColor: '#E6FFFA' }}>
                     <CardBody>
 
                         <Image
@@ -124,7 +124,7 @@ export default function Game() {
                 </Card>
             </GridItem>
             <GridItem>
-                <Card maxW='sm' style={{ height: '100%', backgroundColor: '#F0FFF4' }}>
+                <Card maxW='sm' style={{ height: '100%', backgroundColor: '#E6FFFA' }}>
                     <CardBody>
 
                         <Image
@@ -145,7 +145,7 @@ export default function Game() {
                 </Card>
             </GridItem>
             <GridItem>
-                <Card maxW='sm' style={{ height: '100%', backgroundColor: '#F0FFF4' }}>
+                <Card maxW='sm' style={{ height: '100%', backgroundColor: '#E6FFFA' }}>
                     <CardBody>
 
                         <Image
@@ -166,7 +166,7 @@ export default function Game() {
                 </Card>
             </GridItem>
             <GridItem>
-                <Card maxW='sm' style={{ height: '100%', backgroundColor: '#F0FFF4' }}>
+                <Card className='game-c'maxW='sm' style={{ height: '100%', backgroundColor: '#E6FFFA' }}>
                     <CardBody>
 
                         <Image
@@ -187,7 +187,7 @@ export default function Game() {
                 </Card>
             </GridItem>
             <GridItem>
-                <Card maxW='sm' style={{ height: '100%', backgroundColor: '#F0FFF4' }}>
+                <Card maxW='sm' style={{ height: '100%', backgroundColor: '#E6FFFA' }}>
                     <CardBody>
 
                         <Image
@@ -208,7 +208,7 @@ export default function Game() {
                 </Card>
             </GridItem>
             <GridItem>
-                <Card maxW='sm' style={{ height: '100%', backgroundColor: '#F0FFF4' }}>
+                <Card maxW='sm' style={{ height: '100%', backgroundColor: '#E6FFFA' }}>
                     <CardBody>
 
                         <Image
@@ -229,7 +229,7 @@ export default function Game() {
                 </Card>
             </GridItem>
             <GridItem>
-                <Card maxW='sm' style={{ height: '100%', backgroundColor: '#F0FFF4' }}>
+                <Card maxW='sm' style={{ height: '100%', backgroundColor: '#E6FFFA' }}>
                     <CardBody>
 
                         <Image
@@ -250,7 +250,7 @@ export default function Game() {
                 </Card>
             </GridItem>
             <GridItem>
-                <Card maxW='sm' style={{ height: '100%', backgroundColor: '#F0FFF4' }}>
+                <Card maxW='sm' style={{ height: '100%', backgroundColor: '#E6FFFA' }}>
                     <CardBody>
 
                         <Image
@@ -271,7 +271,7 @@ export default function Game() {
                 </Card>
             </GridItem>
             <GridItem>
-                <Card maxW='sm' style={{ height: '100%', backgroundColor: '#F0FFF4' }}>
+                <Card maxW='sm' style={{ height: '100%', backgroundColor: '#E6FFFA' }}>
                     <CardBody>
 
                         <Image
@@ -292,7 +292,7 @@ export default function Game() {
                 </Card>
             </GridItem>
             <GridItem>
-                <Card maxW='sm' style={{ height: '100%', backgroundColor: '#F0FFF4' }}>
+                <Card maxW='sm' style={{ height: '100%', backgroundColor: '#E6FFFA' }}>
                     <CardBody>
 
                         <Image
@@ -313,7 +313,7 @@ export default function Game() {
                 </Card>
             </GridItem>
             <GridItem>
-                <Card maxW='sm' style={{ height: '100%', backgroundColor: '#F0FFF4' }}>
+                <Card maxW='sm' style={{ height: '100%', backgroundColor: '#E6FFFA' }}>
                     <CardBody>
 
                         <Image
@@ -334,7 +334,7 @@ export default function Game() {
                 </Card>
             </GridItem>
             <GridItem>
-                <Card maxW='sm' style={{ height: '100%', backgroundColor: '#F0FFF4' }}>
+                <Card maxW='sm' style={{ height: '100%', backgroundColor: '#E6FFFA' }}>
                     <CardBody>
 
                         <Image
@@ -356,7 +356,7 @@ export default function Game() {
             </GridItem>
             <GridItem>
 
-                <Card maxW='sm' style={{ height: '100%', backgroundColor: '#F0FFF4' }}>
+                <Card maxW='sm' style={{ height: '100%', backgroundColor: '#E6FFFA' }}>
                     <CardBody>
 
                         <Image
@@ -377,7 +377,7 @@ export default function Game() {
                 </Card>
             </GridItem>
             <GridItem>
-                <Card maxW='sm' style={{ height: '100%', backgroundColor: '#F0FFF4' }}>
+                <Card maxW='sm' style={{ height: '100%', backgroundColor: '#E6FFFA' }}>
                     <CardBody>
 
                         <Image
