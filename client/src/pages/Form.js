@@ -68,7 +68,12 @@ export default function ChatForm() {
               <h2>Chat entries:</h2>
               {posts.map((post) => (
                 <div key={post._id}>
-                  <p>{post.postGamer} says:</p>
+                  {/* <code>
+                    <pre>
+                      {JSON.stringify(post, null, 2)}
+                    </pre>
+                  </code> */}
+                  <p>{post.postGamer.username} says:</p>
                   <p>{post.postText}</p>
                   <p>Posted on: {post.createdAt}</p>
                   {/* Need functionality to edit and delete post: */}

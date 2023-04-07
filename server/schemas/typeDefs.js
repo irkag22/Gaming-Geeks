@@ -12,8 +12,9 @@ const typeDefs = gql`
   type Post {
     _id: ID
     postText: String
-    postGamer: String
+    postGamer: User
     createdAt: String
+
 
   }
 
