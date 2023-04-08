@@ -1,4 +1,4 @@
-import React from 'react';
+import React,{ useState, useEffect } from 'react';
 import { Tabs, TabList, TabPanels, Tab, TabPanel, Center, Flex } from '@chakra-ui/react';
 // import Logo from '../../assets/gg-logo.png';
 import Logos from '../../assets/gaming-g.png';
@@ -19,8 +19,35 @@ import './style.css';
 
 
 function Header() {
+    const [supportsPWA, setSupportsPWA] = useState(false);
+    const [promptInstall, setPromptInstall] = useState(null);
+        const isLoggedIn = Auth.loggedIn();
 
-    const isLoggedIn = Auth.loggedIn();
+        useEffect(() => {
+            const handler = e => {
+              e.preventDefault();
+              console.log("we are being triggered :D");
+              setSupportsPWA(true);
+              setPromptInstall(e);
+            };
+            window.addEventListener("beforeinstallprompt", handler);
+        
+            return () => window.removeEventListener("transitionend", handler);
+          }, []);
+
+        function handleInstallation(evt) {
+            evt.preventDefault();
+    if (!promptInstall) {
+      return;
+    }
+    promptInstall.prompt();
+
+        if (!supportsPWA) {
+        return;
+        }
+
+  
+    }
 
     return (
         <header>
@@ -40,7 +67,7 @@ function Header() {
                         {!isLoggedIn && <Tab key="7">Login</Tab>}
                         {!isLoggedIn && <Tab key="8">Signup</Tab>}
  
-                        <Tab key="9">Install</Tab>
+                        <Tab key="9" onClick={handleInstallation}>Install</Tab>
                     </TabList>
                     <TabPanels>
                         <TabPanel key="1"><Home /></TabPanel>
@@ -53,9 +80,7 @@ function Header() {
                         {!isLoggedIn && <TabPanel key="7"><Login /></TabPanel>}
                         {!isLoggedIn && <TabPanel key="8"><Signup /></TabPanel>}
 
-                        <TabPanel key="9">
-                            {/* <Install /> */}
-                        </TabPanel>
+
                     </TabPanels>
                 </Tabs>
 

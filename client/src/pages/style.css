@@ -6,3 +6,41 @@
     background-color:#C4F1F9;
 }
 
+span {
+    font-weight: bold;
+}
+
+.css-a5mhaz {
+    margin: 20px;
+    border: solid 1px rgb(81, 81, 81);
+    border-radius: 5px;
+}
+
+.chat-input {
+    color: black;
+    height: 60px;
+    width: 600px;
+    margin: 10px;
+}
+
+.chatroom-container {
+    text-align: left;
+}
+
+.date {
+    font-size: x-small;
+    text-align: right;
+}
+.post-mutation {
+    font-size: small;
+    text-align: right;
+}
+
+.chat-form {
+    margin-bottom: 60px;
+    border-bottom: solid 1px white;
+}
+
+.btnmargin {
+    margin: 10px;
+}
