@@ -14,7 +14,7 @@ function Footer() {
   return (
     <Box>
       <Box as="footer" p="4" mt="8" textAlign="center">
-      Created by: Cynthia, Huda, Irina, and Josh
+      ◽ Created by GG Team: Cynthia, Huda, Irina, and Josh ◽
       </Box>
     </Box>
   );

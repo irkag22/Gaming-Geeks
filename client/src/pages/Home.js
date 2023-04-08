@@ -1,25 +1,16 @@
 import React from 'react';
-import { useQuery } from '@apollo/client';
-
-// import { QUERY_USERS } from '../utils/queries';
 
 const Home = () => {
-//   const { loading, data } = useQuery(QUERY_USERS);
-//   const users = data?.users || [];
 
   return (
     <main>
-      <div className="flex-row justify-center">
-        <div
-          className="col-12 col-md-10 mb-3 p-3"
-          style={{ border: '1px dotted #1a1a1a' }}
-        >
-         
-        </div>
-
-        <div className="col-12 col-md-8 mb-3">
-        </div>
-      </div>
+     <p>Welcome to <span>Gaming Geeks</span>! <br />
+     🎮 <br />
+      Connect with gamers worldwide on our gaming chatroom website. <br />
+      Chat, share tips, and discuss strategy. <br />
+      Join our community and indulge in your passion for gaming!</p>
+      <br />
+      - GG Team <br />
     </main>
   );
 };

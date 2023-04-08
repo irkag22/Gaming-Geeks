@@ -57,8 +57,8 @@ function App() {
       <ChakraProvider>
         <Container>
           <Header />
-          <Footer />
         </Container>
+        <Footer />
       </ChakraProvider>
     </ApolloProvider>
 

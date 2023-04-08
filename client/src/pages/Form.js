@@ -58,6 +58,22 @@ export default function ChatForm() {
   return (
     <div>
 
+      {/* Form to submit cht entries */}
+      <form className="chat-form">
+        <label htmlFor="message"></label>
+        <br />
+        <input className="chat-input"
+          onChange={userInput}
+          type="text"
+          id="message"
+          name="message"
+          value={gameText}
+          placeholder='Start chatting here...'
+        />
+        <br />
+        <button type="button" aria-selected="true" className="chakra-tabs__tab css-1q32csp btnmargin" onClick={inputHandle}>Submit</button>
+      </form>
+
       {/* Chat entries to display on page */}
       <div className="flex-row justify-center">
         <div className="col-12 col-md-8 mb-3">
@@ -65,17 +81,18 @@ export default function ChatForm() {
             <div>Loading...</div>
           ) : (
             <>
-              <h2>Chat entries:</h2>
               {posts.map((post) => (
-                <div key={post._id}>
+                <div key={post._id} className="chatroom-container">
                   {/* <code>
                     <pre>
                       {JSON.stringify(post, null, 2)}
                     </pre>
                   </code> */}
-                  <p>{post.postGamer.username} says:</p>
+                  <div className="post-mutation"><button onClick={() => updateHandle(post._id)}>Edit</button> | <button onClick={() => deleteHandle(post._id)}>Delete</button></div>
+                  <p><span>{post.postGamer.username}</span>:</p>
                   <p>{post.postText}</p>
-                  <p>Posted on: {post.createdAt}</p>
+                  <br />
+                  <p className="date"><span>Posted on:</span> {post.createdAt}</p>
                   {/* Need functionality to edit and delete post: */}
                   <div>
                     <button onClick={() => updateHandle(post._id)}>Edit</button>
@@ -90,21 +107,6 @@ export default function ChatForm() {
           )}
         </div>
       </div>
-
-      {/* Form to submit cht entries */}
-      <form>
-        <label htmlFor="message">Chat:</label>
-        <br />
-        <input
-          onChange={userInput}
-          type="text"
-          id="message"
-          name="message"
-          value={gameText}
-        />
-        <br />
-        <button onClick={inputHandle}>Submit</button>
-      </form>
 
     </div>
   );
