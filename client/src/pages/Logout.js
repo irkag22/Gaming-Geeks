@@ -12,13 +12,9 @@ const Logout = (props) => {
   return (
     <>
       <div>
-        <p>{Auth.getProfile().data.username}'s profile</p>
-      </div>
-
-      <div>
-      <button className="btn btn-lg btn-light m-2" onClick={logout}>
-      Logout
-      </button>
+        <p>Please confirm logout from <span>{Auth.getProfile().data.username}</span>'s profile:</p>
+        <br />
+        <button type="button" aria-selected="true" className="chakra-tabs__tab css-1q32csp btnmargin" onClick={logout}>Confirm</button>
       </div>
     </>
   );
