@@ -2,11 +2,13 @@
 
 ## :page_facing_up: Description
 
-- (Description Here) test
+**Welcome to Gaming Geeks!**
+
+This repository is for a gaming chatroom website where you can connect with gamers worldwide on our gaming chatroom website, Where you can chat, share tips, and discuss strategy.
 
 ### Motivation
 
-- (Motivation Here)
+- We decided to create this gaming chatroom website because we love gaming and wanted to provide a space for fellow gamers to connect and build communities around their shared passion.
 
 ### User Story
 
@@ -36,6 +38,10 @@
 
 - [Click here](https://blooming-lake-18705.herokuapp.com/) to navigate to the live link of this repository.
 
+**Feel free to use this account to login that has been created for your convenience:**
+- Email: testing@email.com
+- Password: 12345
+
 ---------------------------
 
 - Screenshots:
@@ -59,6 +65,8 @@
 - Interactive.
 - Includes authentication (JWT).
 - Team-created dataset.
+- Installable.
+- Favicon.
 
 ## :sparkles: Assets
 
@@ -78,7 +86,7 @@
 - **Color Palette:** [Coolors](https://coolors.co/)
 - **Emojis:** [Emoji Cheat Sheet](https://github.com/ikatyang/emoji-cheat-sheet/blob/master/README.md)
 - **Image Resizer:** For application logos in *public* folder [Simple Image Resizer](https://www.simpleimageresizer.com/)
-- **Icons:** [Icon Finder](https://www.iconfinder.com/)
+- **Installation**: [Here](https://dev.to/woile simplest-react-hook-component-for-pwa-install-button-2die)
 
 ## :tornado: Challenges
 - (Challenge here)
