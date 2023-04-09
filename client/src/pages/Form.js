@@ -94,12 +94,12 @@ export default function ChatForm() {
                   <br />
                   <p className="date"><span>Posted on:</span> {post.createdAt}</p>
                   {/* Need functionality to edit and delete post: */}
-                  <div>
+                  {/* <div>
                     <button onClick={() => updateHandle(post._id)}>Edit</button>
                   </div>
                   <div>
                     <button onClick={() => deleteHandle(post._id)}>Delete</button>
-                  </div>
+                  </div> */}
                   <hr />
                 </div>
               ))}
