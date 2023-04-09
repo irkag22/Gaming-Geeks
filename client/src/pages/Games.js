@@ -87,9 +87,9 @@ const game12 = {
 };
 
 const game13 = {
-    name: "Dead By Daylight",
-    description: "Dead by Daylight is a multiplayer (4vs1) horror game where one player takes on the role of the savage Killer, and the other four players play as Survivors, trying to escape the Killer and avoid being caught and killed.",
-    image: "https://cdn.cloudflare.steamstatic.com/steamcommunity/public/images/apps/381210/234111758152b0c49efdf3f182e4b068f3b6f12d.jpg"
+    "name": "Grand Theft Auto V",
+        "description": "Grand Theft Auto V for PC offers players the option to explore the award-winning world of Los Santos and Blaine County in resolutions of up to 4k and beyond, as well as the chance to experience the game running at 60 frames per second.",
+        "image": "https://cdn.cloudflare.steamstatic.com/steamcommunity/public/images/apps/271590/e447e82f8b0c67f9e001498503c62f2a187bc609.jpg"
 };
 
 const game14 = {
