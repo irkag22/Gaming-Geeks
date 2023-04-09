@@ -11,6 +11,17 @@ export const QUERY_USER = gql`
   }
 `;
 
+export const QUERY_USERS = gql`
+  query Query {
+    users {
+      _id
+      username
+      email
+      password
+    }
+  }
+`;
+
 export const QUERY_POSTS = gql`
   query Query {
     posts {

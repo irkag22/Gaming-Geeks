@@ -63,12 +63,12 @@ export default function ChatForm() {
         <label htmlFor="message"></label>
         <br />
         <input className="chat-input"
-        onChange={userInput}
-        type="text"
-        id="message"
-        name="message"
-        value={gameText}
-        placeholder='Start chatting here...'
+          onChange={userInput}
+          type="text"
+          id="message"
+          name="message"
+          value={gameText}
+          placeholder='Start chatting here...'
         />
         <br />
         <button type="button" aria-selected="true" className="chakra-tabs__tab css-1q32csp btnmargin" onClick={inputHandle}>Submit</button>
@@ -94,6 +94,12 @@ export default function ChatForm() {
                   <br />
                   <p className="date"><span>Posted on:</span> {post.createdAt}</p>
                   {/* Need functionality to edit and delete post: */}
+                  {/* <div>
+                    <button onClick={() => updateHandle(post._id)}>Edit</button>
+                  </div>
+                  <div>
+                    <button onClick={() => deleteHandle(post._id)}>Delete</button>
+                  </div> */}
                   <hr />
                 </div>
               ))}
