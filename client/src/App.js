@@ -51,7 +51,7 @@ function App() {
     document.title = 'Gaming Geeks';
   });
   return (
-    <div className="App">
+    <div className="App" >
       
     <ApolloProvider client={client}>
       <ChakraProvider>
