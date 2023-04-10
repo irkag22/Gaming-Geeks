@@ -1,4 +1,3 @@
-import './App.css';
 import { ChakraProvider } from '@chakra-ui/react';
 //import * as React from 'react';
 import React, { useState } from 'react';
@@ -17,7 +16,7 @@ import Header from './components/Header';
 import Footer from './components/Footer';
 //import { Form } from 'react-router-dom';
 import Content from './components/Content';
-
+import './App.css';
 // Construct our main GraphQL API endpoint
 const httpLink = createHttpLink({
   uri: '/graphql',
@@ -52,17 +51,20 @@ function App() {
   });
   return (
     <div className="App" >
-      
-    <ApolloProvider client={client}>
-      <ChakraProvider>
-        <Container>
-          <Header />
-        </Container>
-        <Footer />
-      </ChakraProvider>
-    </ApolloProvider>
 
-    </div>
+      <ApolloProvider client={client}>
+        <ChakraProvider w="100%">
+          
+          <div id="main-content">
+
+            <Header />
+            
+          </div>
+          <Footer />
+        </ChakraProvider>
+      </ApolloProvider>
+
+    </div >
   );
 }
 
