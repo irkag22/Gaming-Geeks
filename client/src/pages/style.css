@@ -44,3 +44,16 @@ span {
 .btnmargin {
     margin: 10px;
 }
+@media only screen and (min-width: 100px) {
+    .white-tabs {
+      width: 600px !important;
+    }
+    .chat-input
+     {
+      width: 400px !important;
+    }
+    .form-input {
+        width: 200px !important;
+    }
+  }
+ 

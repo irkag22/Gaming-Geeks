@@ -1,13 +1,37 @@
 .nav {
     justify-content: center;
-}
-
-.white-tabs .chakra-tabs__tab {
+  }
+  
+  .white-tabs .chakra-tabs__tab {
     color: #ffffff;
-}
-
-.white-tabs .chakra-tabs__tab:focus,
-.white-tabs .chakra-tabs__tab:hover,
-.white-tabs .chakra-tabs__tab[aria-selected='true'] {
+  }
+  
+  .white-tabs .chakra-tabs__tab:focus,
+  .white-tabs .chakra-tabs__tab:hover,
+  .white-tabs .chakra-tabs__tab[aria-selected='true'] {
     text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px cyan, 0 0 70px cyan, 0 0 80px cyan, 0 0 100px cyan;
+  }
+  
+  .dropMenu {
+    color: black
+  }
+  
+  .custom-tab-css {
+    width: 100%;
+  }
+  
+  
+  @media screen and (max-width: 600px) {
+    .white-tabs {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        width: 600px !important;
+    }
+
+    .flex-tabs .white-tabs .chakra-tabs__tab {
+        display: block !important;
+        width: 100% !important;
+        text-align: center !important;
+    }
 }
