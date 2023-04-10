@@ -6,6 +6,7 @@ import { ADD_POST, UPDATE_POST, REMOVE_POST } from '../utils/mutations';
 
 export default function ChatForm() {
   const [gameText, setGameText] = useState('');
+  const [editInput, setEditInput] = useState(false);
   const { loading, data } = useQuery(QUERY_POSTS);
   const [addPost, { error: postError }] = useMutation(ADD_POST);
   const [removePost, { error: removePostError }] = useMutation(REMOVE_POST);
@@ -44,10 +45,12 @@ export default function ChatForm() {
     }
   }
 
-  async function updateHandle(postId) {
+  async function updateHandle(postId, gameText) {
     try {
+      setEditInput(true)
       const { data } = await updatePost({
-        variables: { postId },
+        // variables: { postId: '6434344d7040acb38640e717', postText: 'gameText' },
+        variables: { postId, postText: gameText },
         refetchQueries: [{ query: QUERY_POSTS }],
       })
     } catch (error) {
@@ -88,9 +91,13 @@ export default function ChatForm() {
                       {JSON.stringify(post, null, 2)}
                     </pre>
                   </code> */}
-                  <div className="post-mutation"><button onClick={() => updateHandle(post._id)}>Edit</button> | <button onClick={() => deleteHandle(post._id)}>Delete</button></div>
+                  <div className="post-mutation">
+                    <button onClick={() => updateHandle(post._id, gameText)}>Edit</button>
+                    | <button onClick={() => deleteHandle(post._id)}>Delete</button>
+                  </div>
                   <p><span>{post.postGamer.username}</span>:</p>
-                  <p>{post.postText}</p>
+                  <p onChange={(e) => setGameText(e.target.value)} >{post.postText}</p>
+
                   <br />
                   <p className="date"><span>Posted on:</span> {post.createdAt}</p>
                   {/* Need functionality to edit and delete post: */}

@@ -69,6 +69,7 @@ const resolvers = {
       return post;
     },
     updatePost: async (parent, { postId, postText }, context) => {
+      console.log(postId, postText, context.user);
       if (!context.user) {
         throw new AuthenticationError('Please log in to update your posts');
       }
@@ -78,7 +79,7 @@ const resolvers = {
         { postText },
         { new: true }
       );
-
+      console.log(post);
       if (!post) {
         throw new Error('No post found');
       }
