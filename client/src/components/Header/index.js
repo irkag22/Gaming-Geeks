@@ -49,7 +49,7 @@ function Header() {
   }
 
   return (
-    <header>
+    <header style={{ display: "flex", flexDirection: "column", alignItems: "center" }}>
       <Flex direction="column" align="center">
         <img
           className="img"
@@ -64,6 +64,7 @@ function Header() {
           align="center"
           variant="soft-rounded"
           colorScheme="cyan"
+          style={{ width: "100%" }}
         >
           <TabList className="white-tabs">
             <Tab key="1">Home</Tab>
