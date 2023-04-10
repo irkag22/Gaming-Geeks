@@ -71,7 +71,7 @@ export default function ChatForm() {
           id="message"
           name="message"
           value={gameText}
-          placeholder='Start chatting here...'
+          placeholder='Start chatting here... (or edit chat here)'
         />
         <br />
         <button type="button" aria-selected="true" className="chakra-tabs__tab css-1q32csp btnmargin" onClick={inputHandle}>Submit</button>
