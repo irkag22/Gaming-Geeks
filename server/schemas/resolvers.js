@@ -8,9 +8,32 @@ const resolvers = {
       //return User.find().populate('users');
       return User.find({});
     },
-    user: async (parent, { username }) => {
-      return User.findOne({ username }).populate('posts');
+    user: async (parent, args, context) => {
+      return User.findById(context.user._id);
     },
+    /*
+    user: async (parent, args, context) => {
+      if (context.user) {
+        const user = await User.findById(context.user._id);
+        return user;
+      }
+
+      throw new AuthenticationError('Not logged in');
+    },
+    */
+    /*
+    user: async (parent, context) => {
+
+      return User.findOne({username: 'kdog51'}
+        //{ _id: context.user._id }
+      );
+
+      //return User.findOne({ username }).populate('posts');
+      //const params = username ? { username } : {};
+      //return User.findOne({username});
+      //return User.findOne(params);
+    },
+    */
     posts: async (parent, { username }) => {
       const params = username ? { username } : {};
       return Post.find(params).sort({ createdAt: -1 }).populate('postGamer');
@@ -21,8 +44,8 @@ const resolvers = {
   },
 
   Mutation: {
-    addUser: async (parent, { username, email, password }) => {
-      const user = await User.create({ username, email, password });
+    addUser: async (parent, { username, email, password, favorites }) => {
+      const user = await User.create({ username, email, password, favorites});
       const token = signToken(user);
       return { token, user };
     },
@@ -84,6 +107,23 @@ const resolvers = {
       }
 
       return post;
+    },
+    updateUser: async (parent, { favorites }, context) => {
+
+      if (!context.user) {
+        throw new AuthenticationError('Please log in to update your favorites');
+      }
+
+      const user = await User.findOneAndUpdate(
+        { _id: context.user._id },
+        { favorites: favorites}
+      );
+
+      if (!user) {
+        throw new Error('No user found');
+      }
+
+      return user;
     }
   },
 }

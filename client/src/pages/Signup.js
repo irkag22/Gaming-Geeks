@@ -10,6 +10,7 @@ const Signup = () => {
     username: '',
     email: '',
     password: '',
+    favorites: '',
   });
   const [addUser, { error, data }] = useMutation(ADD_USER);
 
@@ -74,6 +75,13 @@ const Signup = () => {
                   value={formState.password}
                   onChange={handleChange}
                 />
+                <input
+                  className="form-input"
+                  placeholder="******"
+                  name="favorites"
+                  type="hidden"
+                  value=""
+                />                
                 <button
                   className="btn btn-block btn-primary"
                   style={{ cursor: 'pointer' }}

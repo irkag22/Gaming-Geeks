@@ -6,6 +6,7 @@ const typeDefs = gql`
     username: String
     email: String
     password: String
+    favorites: String
     posts: [Post]!
   }
 
@@ -14,8 +15,6 @@ const typeDefs = gql`
     postText: String
     postGamer: User
     createdAt: String
-
-
   }
 
   type Auth {
@@ -25,18 +24,18 @@ const typeDefs = gql`
 
   type Query {
     users: [User]
-    user(username: String!): User
+    user: User
     posts(username: String): [Post]
     post(postId: ID!): Post
   }
 
   type Mutation {
-    addUser(username: String!, email: String!, password: String!): Auth
+    addUser(username: String!, email: String!, password: String!, favorites: String!): Auth
     login(email: String!, password: String!): Auth
     addPost(postText: String!): Post
     removePost(postId: ID!): Post
     updatePost(postId: ID!, postText: String!): Post
+    updateUser(favorites: String!): User
   }
 `;
-
 module.exports = typeDefs;
