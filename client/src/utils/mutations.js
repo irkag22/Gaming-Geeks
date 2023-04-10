@@ -51,8 +51,8 @@ mutation Mutation($postId: ID!) {
 }`;
 
 export const UPDATE_POST = gql`
-mutation Mutation($postText: String!, $postGamer: ID!) {
-  updatePost(postText: $postText, postGamer: $postGamer) {
+mutation UpdatePost($postId: ID!, $postText: String!) {
+  updatePost(postId: $postId, postText: $postText) {
     _id
     postGamer {
       _id
