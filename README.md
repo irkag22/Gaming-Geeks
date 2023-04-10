@@ -46,61 +46,62 @@ We decided to create this gaming chatroom website because we love gaming and wan
 
 - When you navigate to the live link above, you are presented with the following page:
 
-<img src="./demo-images/demo1.png" width="600" height="300">
+<img width="1440" alt="demo1" src="https://user-images.githubusercontent.com/122703273/230974271-ea6b2093-c75f-4534-b6ea-f9b58fcd4235.png" width="600" height="300">
+
 
 ---------------------------
 
 - You can click on *Signup* to make an account, or *Login* if you already have an account:
 
-<img src="./demo-images/demo2.png" width="600" height="300">
+<img width="1436" alt="demo2" src="https://user-images.githubusercontent.com/122703273/230974569-ee16b208-97f4-4200-88da-c1b048b1faae.png" width="600" height="300">
 
-<img src="./demo-images/demo3.png" width="600" height="300">
+<img width="1437" alt="demo3" src="https://user-images.githubusercontent.com/122703273/230974787-d62c153b-8f81-45d7-a3e4-78515a4eebb4.png" width="600" height="300">
 
 ---------------------------
 
 - Once logged in, you will be able to see the following tabs:
 
-<img src="./demo-images/demo4.png" width="600" height="300">
+<img width="1440" alt="demo4" src="https://user-images.githubusercontent.com/122703273/230974977-d5f10489-535d-46bb-9f47-3018e96266a3.png" width="600" height="300">
 
 ---------------------------
 
-- Profile tab will welcome you with your logged in username:
+- Profile tab will welcome you with your logged in username and ask for your favorite games:
 
-<img src="./demo-images/demo5.png" width="600" height="300">
+<img width="1437" alt="demo5" src="https://user-images.githubusercontent.com/122703273/230975247-8335dcb9-a2f2-4314-b09a-e05bc2e03c12.png" width="600" height="300">
 
 ---------------------------
 
 - Games tab to browse games:
 
-<img src="./demo-images/demo6.png" width="600" height="300">
+<img width="1440" alt="demo6" src="https://user-images.githubusercontent.com/122703273/230975479-2988689d-0ed4-4698-899b-8fecd5442418.png" width="600" height="300">
 
 ---------------------------
 
 - Chat tab with a chatroom layout:
 
-<img src="./demo-images/demo7.png" width="600" height="300">
+<img width="1438" alt="demo7" src="https://user-images.githubusercontent.com/122703273/230975702-e695f3d8-7037-4552-94c3-89ab9751c701.png" width="600" height="300">
 
 ---------------------------
 
-- Gamers tab showing all gamers:
+- Gamers tab showing all gamers and their favorite games:
 
-<img src="./demo-images/demo8.png" width="600" height="300">
+<img width="1434" alt="demo8" src="https://user-images.githubusercontent.com/122703273/230976117-ea2250a1-786c-4020-bc38-c54b5344145a.png" width="600" height="300">
 
 ---------------------------
 
 - Logout tab will ask you for logout confirmation with your logged in username:
 
-<img src="./demo-images/demo9.png" width="600" height="300">
+<img width="1440" alt="demo9" src="https://user-images.githubusercontent.com/122703273/230976306-dc86f781-c674-46ca-ac28-d08e8dfcab5e.png" width="600" height="300">
 
 ---------------------------
 
 - Install tab enables you to install the application:
 
-<img src="./demo-images/demo10.png" width="600" height="300">
+<img width="1440" alt="demo10" src="https://user-images.githubusercontent.com/122703273/230976479-56df8a25-c44a-4eb6-912e-da312977f7f3.png" width="600" height="300">
 
-<img src="./demo-images/demo11.png" width="600" height="300">
+<img width="1321" alt="demo11" src="https://user-images.githubusercontent.com/122703273/230976672-87a6481c-8cd8-471b-abea-2611c9143bb3.png" width="600" height="300">
 
-<img src="./demo-images/demo12.png" width="600" height="300">
+<img width="911" alt="demo12" src="https://user-images.githubusercontent.com/122703273/230976853-e1052158-61d2-454e-832f-c5dd59f02aee.png" width="600" height="300">
 
 ---------------------------
 
